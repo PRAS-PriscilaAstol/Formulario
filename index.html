@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
+    crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+
+                <form class="row g-3  p-2 m-3" id="form">
+                    <div class="col-md-3">
+                      <label for="name" class="form-label"> Nombre</label>
+                      <input type="text" class="form-control " id="name" value="Mark" required>
+                      <div class="valid-feedback">
+                      *Campo obligatorio
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <label for="surname" class="form-label"> Apellido</label>
+                      <input type="text" class="form-control " id="surname" value="Otto" required>
+                      <div class="valid-feedback">
+                        *Campo obligatorio
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="sex" class="form-label">Sexo</label>
+                        <select class="form-select " id="sex" aria-describedby="validationServer04Feedback" required>
+                          <option selected  value="hombre">Hombre</option>
+                          <option selected  value="mujer">Mujer</option>
+                          <option selected  value="otro">Otro</option>
+                        </select>
+                        <div id="validationServer04Feedback" class="invalid-feedback">
+                          *Campo obligatorio
+                        </div>
+                      </div>
+                    <div class="col-md-3">
+                        <label for="age" class="form-label">Edad</label>
+                      <input type="number" min ="1" class="form-control " id="age" aria-describedby="validationServer05Feedback" required>
+                        <div id="validationServer05Feedback" class="invalid-feedback">
+                            *Campo obligatorio
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                      <label for="address" class="form-label">Direccion</label>
+                      <input type="text" class="form-control " id="address" aria-describedby="validationServer03Feedback" required>
+                      <div id="validationServer03Feedback" class="invalid-feedback">
+                        *Campo obligatorio
+                      </div>
+                    </div>
+                    <div class="col-md-2">
+                      <label for="occupation" class="form-label">Ocupasion</label>
+                      <select class="form-select " id="occupation" aria-describedby="validationServer04Feedback" required>
+                        <option selected  value="ocio">Ocio</option>
+                        <option selected  value="estudiaytrabaja">Estudia y trabaja</option>
+                        <option selected  value="trabaja">Trabaja</option>
+                        <option selected  value="estudia">Estudia</option>
+                      </select>
+                      <div id="validationServer04Feedback" class="invalid-feedback">
+                        *Campo obligatorio
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="mail" class="form-label">Correo</label>
+                      <input type="email" class="form-control " id="mail" aria-describedby="validationServer05Feedback" required>
+                      <div id="validationServer05Feedback" class="invalid-feedback">
+                        *Campo obligatorio
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                        <label for="urlImg" class="form-label">URL Foto</label>
+                        <input type="text" class="form-control " id="urlImg" aria-describedby="validationServer03Feedback" required>
+                        <div id="validationServer03Feedback" class="invalid-feedback">
+                          *Campo obligatorio
+                        </div>
+                      </div>
+                    <div class="d-grid gap-2 col-md-6 mx-auto">
+                      <button class="btn btn-outline-secondary " type="button" onclick="save()">Guardar</button>
+                    </div>
+                    <div class="d-grid gap-2 col-md-6 mx-auto"  >
+                      <button class="btn btn-outline-secondary " id ="elemento" style="display:block;" type="button" onclick="cancelarEdit()" >Cancelar</button>
+                    </div>
+                  </form>
+                
+                <div class="row  g-3  p-2 m-3">
+                    <div class="col-md-12 justify-content-md-center contenedor-tabla">
+                        <table class="table " id="table">
+                            <thead>
+                              <tr>
+                                <th scope="col-md-1"></th>
+                                <th scope="col-md-1">Foto</th>
+                                <th scope="col-md-1">Nombre</th>
+                                <th scope="col-md-1">Apellido</th>
+                                <th scope="col-md-1">Sexo</th>
+                                <th scope="col-md-1">Edad</th>
+                                <th scope="col-md-1">Direccion</th>
+                                <th scope="col-md-1">Ocupasion</th>
+                                <th scope="col-md-1">Correo</th>
+                              </tr>
+                            </thead>
+                            <tbody ></tbody>
+                            </tbody>
+                          </table>
+                    </div>
+                </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
